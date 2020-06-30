@@ -1,1 +1,1 @@
-# go-secret
+# Go Secret
