@@ -20,16 +20,17 @@
         background-color: #37474f;
         border-radius: 10px;
       }
-      label {
+      .cyan-color {
         color: rgb(106, 247, 252);
-        font-size: 1rem;
       }
       input {
-        color: rgb(255, 255, 255);
+        color: whitesmoke;
+      }
+      label {
+        font-size: 1rem;
       }
       h2 {
         font-family: "Yellowtail", cursive;
-        color: rgb(106, 247, 252);
       }
       .btn {
         border-radius: 18px;
@@ -45,6 +46,7 @@
       }
       p {
         color: whitesmoke;
+        text-transform: initial;
       }
     </style>
   </head>
@@ -52,13 +54,13 @@
     <main>
       <div class="container">
         <div class="row show-msg hide">
-          <h2 class="center-align">Message</h2>
+          <h2 class="center-align cyan-color">Message</h2>
           <div class="card z-depth-4">
             <div class="card-content">
               <p class="flow-text"></p>
             </div>
             <div class="card-action">
-              <a href="./index.html" class="cyan-text text-accent-2"
+              <a href="./index.html" class="cyan-text text-accent-3"
                 ><u>Write your secret message</u></a
               >
             </div>
@@ -67,14 +69,19 @@
 
         <div class="row write-msg">
           <div class="center">
-            <h2>Go Secret</h2>
+            <h2 class="cyan-color">Go Secret</h2>
+            <span class="cyan-color"
+              >Send secret message to your friend via link</span
+            >
           </div>
           <div class="card z-depth-4">
             <br />
             <form>
               <div class="row">
                 <div class="col s12">
-                  <label for="first_name">Your message</label>
+                  <label for="first_name" class="cyan-color"
+                    >Your message</label
+                  >
                   <input type="text" id="message" autocomplete="off" />
                 </div>
               </div>
@@ -91,7 +98,9 @@
           <br />
           <div class="row hide sharedLink">
             <div class="col s12 m12 l12">
-              <label for="share">Share this link with your friend</label>
+              <label for="share" class="cyan-color"
+                >Share this link with your friend</label
+              >
               <input
                 name=""
                 id="copy-text"
