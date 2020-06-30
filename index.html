@@ -18,28 +18,55 @@
       }
       .card {
         background-color: #37474f;
+        border-radius: 10px;
       }
       label {
-        color: #ff6f00;
+        color: rgb(106, 247, 252);
+        font-size: 1rem;
       }
       input {
         color: rgb(255, 255, 255);
       }
       h2 {
         font-family: "Yellowtail", cursive;
+        color: rgb(106, 247, 252);
       }
       .btn {
         border-radius: 18px;
         font-weight: 600;
+        color: rgb(0, 0, 0);
+        text-transform: none;
+      }
+      .show {
+        display: block !important;
+      }
+      .container {
+        margin-top: 10%;
+      }
+      p {
+        color: whitesmoke;
       }
     </style>
   </head>
   <body>
     <main>
-      <br />
       <div class="container">
-        <div class="row">
-          <div class="center amber-text text-darken-4">
+        <div class="row show-msg hide">
+          <h2 class="center-align">Message</h2>
+          <div class="card z-depth-4">
+            <div class="card-content">
+              <p class="flow-text"></p>
+            </div>
+            <div class="card-action">
+              <a href="./index.html" class="cyan-text text-accent-2"
+                ><u>Write your secret message</u></a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row write-msg">
+          <div class="center">
             <h2>Go Secret</h2>
           </div>
           <div class="card z-depth-4">
@@ -48,18 +75,30 @@
               <div class="row">
                 <div class="col s12">
                   <label for="first_name">Your message</label>
-                  <input type="text" id="message" />
+                  <input type="text" id="message" autocomplete="off" />
                 </div>
               </div>
               <div class="center">
                 <input
                   type="submit"
                   value="Generate Secret Link"
-                  class="btn blue-grey lighten-3 black-text z-depth-3"
+                  class="btn blue-grey lighten-3 z-depth-3"
                 />
               </div>
               <br />
             </form>
+          </div>
+          <br />
+          <div class="row hide sharedLink">
+            <div class="col s12 m12 l12">
+              <label for="share">Share this link with your friend</label>
+              <input
+                name=""
+                id="copy-text"
+                class="grey darken-4 white-text"
+                readonly
+              />
+            </div>
           </div>
         </div>
       </div>
